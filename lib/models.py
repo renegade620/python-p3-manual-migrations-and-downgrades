@@ -17,11 +17,11 @@ engine = create_engine('sqlite:///migrations_test.db')
 Base = declarative_base()
 
 class Student(Base):
-    __tablename__ = 'students'
+    __tablename__ = 'scholars'
 
     id = Column(Integer(), primary_key=True)
     name = Column(String(), index=True)
-    email = Column(String(55))
+    email_address = Column(String(55))
     grade = Column(Integer())
     birthday = Column(DateTime())
     enrolled_date = Column(DateTime(), default=datetime.now())
